@@ -125,3 +125,11 @@ form{
     color: black;
     cursor: pointer;
 }
+.mystore{
+    text-shadow: 2px 2px black ;
+    position: absolute;
+    line-height: 10vw;
+    font: arial ;
+    margin-left: 40px;
+    color: black;
+}
