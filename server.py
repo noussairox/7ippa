@@ -43,18 +43,23 @@ def about():
 
 @app.route("/contact",methods=['GET','POST'])
 def contact():
-    valid=False
+    valid=True
+    ALL=[]
     if request.method=="POST":
         nom=request.form.get("nom")
-        mail=request.form.get("mail")
+        email=request.form.get("email")
         message=request.form.get("message")
         mdate=request.form.get("mdate")
-        msg=Message(nom=nom, mail=mail,message=message,mdate=mdate)
+        rate=request.form.get("rate")
+        msg=Message(nom=nom, email=email,message=message,mdate=mdate, rate=rate)
         db.session.add(msg)
         db.session.commit()
-        valid=True
     messages=Message.query.all()
-    return  render_template("contact.html",valid=valid,messages=messages)
+ 
+    for MESSAGE in messages:
+        ALL.insert(0,MESSAGE)
+    
+    return  render_template("contact.html",valid=valid,messages=ALL)
 
 
 @app.route("/product/<id>")

@@ -165,3 +165,11 @@ form{
 .description-product p{
     font-size: 40px;
 }
+#addComent{
+    position: fixed;
+    width: 80px;
+    height: 80px;
+    bottom: 40px;
+    right: 7px;
+    
+}
