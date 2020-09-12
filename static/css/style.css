@@ -141,3 +141,27 @@ form{
     right: 10px;
     
 }
+.Product{
+    border: 0.5px solid black;
+    margin: 10px auto;
+    width: 60%;
+    height: 615px;
+    padding: 20px;
+    box-shadow: 0 8px 4px 0 black;
+    
+}
+.description-product img{
+    float: left;
+    width: 300px;
+    height: 200px;
+}
+.parts-product h1{
+    font: arial;
+    font-size: 40px;
+}
+.parts-product{
+    text-align: center;
+}
+.description-product p{
+    font-size: 40px;
+}

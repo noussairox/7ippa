@@ -1,1 +1,24 @@
-<H1>product Page</H1>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{ titre }}</title>
+        <link rel="stylesheet" href="/static/css/style.css">
+    </head>
+    <body>
+        
+        <div class="Product">
+            <div class="parts-product">
+                <h1>{{ titre }}</h1>
+                <h3> {{ Specs }} </h2>
+                <h4> {{ prix }} DH</h4>
+            </div><br><br><br>
+            <div class="description-product">
+                <img src="/static/images/{{image}}" alt="{{ titre}}">
+                <p>{{ description }} </p>
+            </div>
+        </div>
+
+    </body>
+</html>

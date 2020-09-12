@@ -56,5 +56,18 @@ def contact():
     messages=Message.query.all()
     return  render_template("contact.html",valid=valid,messages=messages)
 
+
+@app.route("/product/<id>")
+def prduit(id):
+    products = Product.query.all()
+    id = products[int(id)]
+    titre = id.titre
+    description = id.description
+    prix = id.prix
+    image = id.image
+    Specs = id.Specs
+    return render_template("product.html", id = id, titre = titre, prix = prix, Specs = Specs, image = image, description = description)
+
+
 if __name__=="__main__":
     app.run(debug=True)
