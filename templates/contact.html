@@ -1,13 +1,13 @@
 {% extends "base.html" %}
 {% block content%}
-            <div id='comments'></div>
+            <div id='Mrecomments'></div>
         {% if valid %}
             {% for msg in messages %}
                 <div class='msg'>
                     <p><strong>Name : </strong>{{msg.nom}}</p>
                     <p><strong>Email : </strong>{{msg.email}}</p>
                     <p><strong>Date : </strong>{{msg.mdate}}</p>
-                    <p><strong>Rate : </strong>{{msg.rate}}</p>
+                    
                     <div id="{{ msg.rate }}" class="rates">
                         
                     </div>
